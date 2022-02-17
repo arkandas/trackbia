@@ -1,0 +1,31 @@
+<div *ngFor="let view of pagedItems" style="margin: 5px">
+  <div class="card" style="border: solid #54636F 1px">
+    <div class="card-content" style="font-size: 14px; padding: 0.4rem">
+      <p><b>IP Address:</b>&nbsp; {{view.ipAddress}}</p>
+      <p><b>Date:</b>&nbsp; {{view.timestamp | date : 'dd/MM/yyyy, hh:mm:ss a' }}</p>
+      <p><b>Page:</b>&nbsp; {{view.blogPage}}</p>
+      <p><b>Country:</b>&nbsp;{{view.country}} &nbsp;<span
+        class="flag-icon flag-icon-{{view.countryIsoCode | lowercase}} flag-icon-squared"></span></p>
+      <p><b>City:</b>&nbsp; {{view.city}} ({{view.postalCode}})</p>
+      <p><b>ASN Operator:</b> &nbsp;{{view.asnOperator}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Pagination -->
+<nav class="pagination is-centered" role="navigation" aria-label="pagination" style="margin-top: 20px;">
+  <!-- List of pages -->
+  <ul *ngIf="pagination.pages && pagination.pages.length && pagination.pages.length > 1" class="pagination-list">
+    <li *ngFor="let page of pagination.pages">
+      <a class="pagination-link" [class.is-current]="pagination.currentPage === page"
+         (click)="setPage(page)">{{page}}</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container" style="display: flex;justify-content: center; margin-top: 20px;">
+  <div class="tags has-addons">
+    <span class="tag is-dark">version</span>
+    <span class="tag is-info">{{version}}</span>
+  </div>
+</div>

@@ -1,0 +1,175 @@
+<!-- Hero-->
+
+<section class="hero is-info welcome is-small">
+  <div class="hero-body">
+    <h1 class="title">
+      QR Code: {{hashId}}
+    </h1>
+  </div>
+</section>
+
+<section class="info-tiles" style="margin: 15px 15px 5px;">
+  <div class="tile is-ancestor">
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" style="border: solid #54636F 1px">
+        <div class="level ">
+          <div class="level-item">
+            <div class="is-widget-label">
+              <h1 class="title is-spaced has-text-totalviews">
+                <div>{{totalViewsLocal.totalViews}}</div>
+              </h1>
+              <h3 class="subtitle">Total Views</h3>
+            </div>
+          </div>
+          <div class="level-item has-widget-icon">
+            <div class="is-widget-icon">
+              <span class="icon has-text-totalviews is-align-items-center is-flex">
+                  <fa-icon [icon]="faTotalViewsIcon" size="4x"></fa-icon>
+            </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" style="border: solid #54636F 1px">
+        <div class="level ">
+          <div class="level-item">
+            <div class="is-widget-label">
+              <h1 class="title is-spaced has-text-uniquevisitors">
+                <div>{{totalViewsLocal.uniqueVisitors}}</div>
+              </h1>
+              <h3 class="subtitle">Unique Visitors</h3>
+            </div>
+          </div>
+          <div class="level-item has-widget-icon">
+            <div class="is-widget-icon">
+              <span class="icon has-text-uniquevisitors is-align-items-center is-flex">
+                  <fa-icon [icon]="faUniqueVisitor" size="4x"></fa-icon>
+            </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" style="border: solid #54636F 1px">
+        <div class="level ">
+          <div class="level-item">
+            <div class="is-widget-label">
+              <h1 class="title is-spaced has-text-countries">
+                <div>{{totalViewsLocal.countries}}</div>
+              </h1>
+              <h3 class="subtitle">Countries</h3>
+            </div>
+          </div>
+          <div class="level-item has-widget-icon">
+            <div class="is-widget-icon">
+              <span class="icon has-text-countries is-align-items-center is-flex">
+                  <fa-icon [icon]="faFlagIcon" size="4x"></fa-icon>
+            </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" style="border: solid #54636F 1px">
+        <div class="level ">
+          <div class="level-item">
+            <div class="is-widget-label">
+              <h1 class="title is-spaced has-text-pageviews">
+                <div>{{totalViewsLocal.lastDay}}</div>
+              </h1>
+              <h3 class="subtitle">Today</h3>
+            </div>
+          </div>
+          <div class="level-item has-widget-icon">
+            <div class="is-widget-icon">
+              <span class="icon has-text-pageviews is-align-items-center is-flex">
+                  <fa-icon [icon]="faCalendarDay" size="4x"></fa-icon>
+            </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" style="border: solid #54636F 1px">
+        <div class="level ">
+          <div class="level-item">
+            <div class="is-widget-label">
+              <h1 class="title is-spaced has-text-pageviews">
+                <div>{{totalViewsLocal.lastWeek}}</div>
+              </h1>
+              <h3 class="subtitle">Last 7 Days</h3>
+            </div>
+          </div>
+          <div class="level-item has-widget-icon">
+            <div class="is-widget-icon">
+              <span class="icon has-text-pageviews is-align-items-center is-flex">
+                  <fa-icon [icon]="faCalendarWeek" size="4x"></fa-icon>
+            </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box" style="border: solid #54636F 1px">
+        <div class="level ">
+          <div class="level-item">
+            <div class="is-widget-label">
+              <h1 class="title is-spaced has-text-pageviews">
+                <div>{{totalViewsLocal.lastMonth}}</div>
+              </h1>
+              <h3 class="subtitle">Last 30 Days</h3>
+            </div>
+          </div>
+          <div class="level-item has-widget-icon">
+            <div class="is-widget-icon">
+              <span class="icon has-text-pageviews is-align-items-center is-flex">
+                  <fa-icon [icon]="faCalendarMonth" size="4x"></fa-icon>
+            </span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+  </div>
+
+</section>
+
+<div class="columns">
+  <div class="column is-one-quarter">
+
+    <section class="hero is-info welcome is-small" style="margin-bottom: 10px;">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Last Visited Pages
+          </h1>
+        </div>
+      </div>
+    </section>
+
+
+    <app-view-card-list [hashId]="hashId"></app-view-card-list>
+
+  </div>
+  <!--    <div class="column" style="border: solid #000000 1px; padding-bottom: 0px">-->
+  <div class="column" style="padding-left: 0px; padding-bottom: 0px;">
+    <app-map [hashId]="hashId"></app-map>
+
+  </div>
+</div>
+

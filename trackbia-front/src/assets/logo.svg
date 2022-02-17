@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="318 259 298 73" width="298" height="73">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="50" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.5\n2021-12-09 00:40:14 +0000</metadata>
+  <g id="Canvas_1" stroke="none" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" fill="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_42">
+        <g id="Graphic_43">
+          <title>Rectangle</title>
+          <path d="M 375.42002 259.23993 L 333.57998 259.23993 C 325.2957 259.23993 318.57998 265.95566 318.57998 274.23993 L 318.57998 316.07998 C 318.57998 324.36425 325.2957 331.07998 333.57998 331.07998 L 375.42002 331.07998 C 383.7043 331.07998 390.42002 324.36425 390.42002 316.07998 L 390.42002 274.23993 C 390.42002 265.95566 383.7043 259.23993 375.42002 259.23993 Z" fill="#12232e"/>
+        </g>
+        <g id="Graphic_2">
+          <rect x="391.5" y="263.15995" width="224" height="64" fill="white"/>
+          <rect x="391.5" y="263.15995" width="224" height="64" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"/>
+          <text transform="translate(396.5 264.43478)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="50" font-weight="700" fill="black" x="5.175" y="49">Trackbia</tspan>
+          </text>
+        </g>
+        <g id="Group_41">
+          <g id="Line_17">
+            <line x1="322.5" y1="292.33917" x2="354.5" y2="327.15995" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_16">
+            <line x1="386.5" y1="292.33917" x2="354.5" y2="327.15995" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_15">
+            <line x1="322.5" y1="292.33917" x2="331.69383" y2="284.41265" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_14">
+            <line x1="386.5" y1="292.33917" x2="377.30617" y2="284.41265" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_13">
+            <line x1="331.86946" y1="284.41265" x2="341.0633" y2="294.324" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_12">
+            <line x1="377.30617" y1="284.41265" x2="368.11234" y2="294.324" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_11">
+            <line x1="341.0633" y1="294.324" x2="368.11234" y2="294.324" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_10">
+            <line x1="333.3794" y1="279.45104" x2="341.98745" y2="288.36997" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_9">
+            <line x1="375.82593" y1="279.45104" x2="367.2179" y2="288.36997" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_8">
+            <line x1="367.2179" y1="288.36997" x2="341.98745" y2="288.36997" stroke="#ffa45b" stroke-linecap="butt" stroke-linejoin="bevel" stroke-width="3"/>
+          </g>
+          <g id="Line_4">
+            <line x1="341.0633" y1="294.324" x2="354.5" y2="327.15995" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_3">
+            <line x1="354.5" y1="327.15995" x2="368.11234" y2="294.324" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_37">
+            <path d="M 341.98745 288.36997 L 354.5 276.10726 L 367.2179 288.36997" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_39">
+            <path d="M 333.3794 279.45104 L 354.77327 263.15995 L 375.82593 279.45104" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          <g id="Line_40">
+            <line x1="354.5" y1="276.10726" x2="354.77327" y2="263.15995" stroke="#ffa45b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

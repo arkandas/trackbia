@@ -1,0 +1,52 @@
+<div id="app">
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://trackbia.arkandas.com">
+        <img src="assets/logo.svg">
+      </a>
+      <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" aria-label="menu"
+         aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu" #navMenu>
+      <div class="navbar-start">
+        <li class="navbar-item">
+          <a href="/home" class="navbar-item" routerLink="home">
+            <span class="icon has-text-info-dark">
+              <fa-icon [icon]="faHome"></fa-icon>
+            </span>
+            <span>Home</span>
+          </a>
+          <a href="/admin" class="navbar-item" *ngIf="showAdminBoard" routerLink="admin">Admin Board</a>
+          <a href="/dashboard" class="navbar-item" *ngIf="isLoggedIn" routerLink="dashboard">
+            <span class="icon has-text-primary-dark">
+              <fa-icon [icon]="faDashboard"></fa-icon>
+            </span>
+            <span>Dashboard</span>
+          </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons" *ngIf="!isLoggedIn">
+            <a href="/register" class="button is-primary" routerLink="register">Sign Up</a>
+            <a href="/login" class="button is-link" routerLink="login">Login</a>
+          </div>
+
+          <div class="buttons" *ngIf="isLoggedIn">
+            <a href="/profile" class="button is-info" routerLink="profile">{{ username }}</a>
+            <a href class="button is-danger" (click)="logout()">LogOut</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
+

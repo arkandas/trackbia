@@ -1,0 +1,41 @@
+<div class="card card-container" *ngIf="currentUser; else loggedOut">
+  <div class="card-image">
+    <figure class="image ">
+      <img
+        src="https://picsum.photos/id/237/940/650"
+        alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-2 has-text-centered">{{currentUser.username}}</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="field" style="margin-left: 10px; margin-right: 10px;">
+        <label class="label">Email</label>
+        <p>{{ currentUser.email }}</p>
+      </div>
+      <div class="field" style="margin-left: 10px; margin-right: 10px;">
+        <label class="label">Token</label>
+        {{ currentUser.accessToken.substring(0, 20) }} ...
+        {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+      </div>
+      <div class="field" style="margin-left: 10px; margin-right: 10px;">
+        <label class="label">Roles</label>
+        <ul>
+          <li *ngFor="let role of currentUser.roles">
+            {{ role }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <ng-template #loggedOut>
+      Please login.
+    </ng-template>
+
+

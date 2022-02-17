@@ -1,0 +1,36 @@
+.alert {
+  position: fixed;
+  top: 5vh;
+  right: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  padding: 2rem;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(1.25rem);
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+  padding: 12px;
+}
+
+.hero.welcome.is-info {
+  background: #26363F;
+  background: -webkit-linear-gradient(to right, #26363F, #54636F);
+  background: linear-gradient(to right, #26363F, #54636F);
+}
+
+.hero.welcome .title, .hero.welcome .subtitle {
+  color: hsl(192, 17%, 99%);
+}
+
+.table__wrapper {
+  overflow-x: auto;
+}
