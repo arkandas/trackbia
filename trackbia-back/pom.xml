@@ -10,8 +10,8 @@
     </parent>
     <groupId>com.arkandas</groupId>
     <artifactId>trackbiaback</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
     <name>trackbia-back</name>
     <description>trackbia-back</description>
     <properties>

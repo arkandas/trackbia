@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  postgres-db:
+    image: postgres:14.5-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=arkandas
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=trackbia
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+      - ./db/init_data.sql:/docker-entrypoint-initdb.d/init_data.sql
+  trackbiaback:
+    image: 'trackbiaback:latest'
+    build:
+      context: ./trackbia-back/
+    container_name: trackbiaback
+    depends_on:
+      - postgres-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/trackbia
+      - SPRING_DATASOURCE_USERNAME=arkandas
+      - SPRING_DATASOURCE_PASSWORD=test
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - '8080:8080'
+volumes:
+  postgres-db:
+    driver: local
