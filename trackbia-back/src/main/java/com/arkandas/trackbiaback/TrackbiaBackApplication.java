@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TrackbiaBackApplication {
+public class TrackbiabackApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TrackbiaBackApplication.class, args);
+        SpringApplication.run(TrackbiabackApplication.class, args);
     }
 
 }
