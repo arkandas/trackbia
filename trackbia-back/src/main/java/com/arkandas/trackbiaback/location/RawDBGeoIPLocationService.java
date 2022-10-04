@@ -15,8 +15,8 @@ public class RawDBGeoIPLocationService {
     private DatabaseReader getDbReaderASN;
 
     public RawDBGeoIPLocationService() throws IOException {
-        File databaseCity = new File("/home/ubuntu/dbIP/GeoLite2-City.mmdb");
-        File databaseASN = new File("/home/ubuntu/dbIP/GeoLite2-ASN.mmdb");
+        File databaseCity = new File("/opt/app/dbIP/GeoLite2-City.mmdb");
+        File databaseASN = new File("/opt/app/dbIP/GeoLite2-ASN.mmdb");
         dbReaderCity = new DatabaseReader.Builder(databaseCity).build();
         getDbReaderASN = new DatabaseReader.Builder(databaseASN).build();
 
