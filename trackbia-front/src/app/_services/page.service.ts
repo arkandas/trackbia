@@ -1,10 +1,10 @@
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {map} from "rxjs/operators";
-import {UserView} from "../models/UserView";
 import {SeccryptoService} from "./seccrypto.service";
 import {DeviceDetectorService} from 'ngx-device-detector';
 import {environment} from "../../environments/environment";
+import {UserView} from "../models/UserView";
 
 
 const AUTH_API = environment.apiUrl + '/api/page/';

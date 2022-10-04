@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {QRCode} from "../models/QRCode";
 import {environment} from "../../environments/environment";
-import {UserView} from "../models/UserView";
 import {DeviceDetectorService} from "ngx-device-detector";
+import {QRCode} from "../models/QRCode";
+import {UserView} from "../models/UserView";
 
 const AUTH_API = environment.apiUrl + '/api/qr/';
 
@@ -28,7 +28,6 @@ export class QrService {
     return this.http.post(AUTH_API + 'update/' + hashId, codeDescription, httpOptions);
 
   }
-
 
   deleteQrByHashId(hashId: string) {
     return this.http.post(AUTH_API + 'delete/' + hashId, httpOptions);

@@ -2,8 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {PaginationService} from "../_services/pagination.service";
 import {Subscription} from "rxjs";
 import {first} from "rxjs/operators";
-import {SharedService} from "../_services/shared.service";
 import {ViewsBackendService} from "../_services/views-backend.service";
+import {SharedService} from "../_services/shared.service";
 import {environment} from "../../environments/environment";
 
 @Component({

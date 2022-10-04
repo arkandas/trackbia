@@ -1,17 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../_services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {first} from "rxjs/operators";
-import {DeviceDetectorService} from "ngx-device-detector";
-import {PageService} from "../_services/page.service";
-import {QrService} from "../_services/qr.service";
 import {
-  faBusinessTime, faChartPie, faMarsDouble,
-  faRegistered,
+  faBusinessTime,
+  faChartPie,
   faSolarPanel,
-  faSpaceShuttle, faTableTennis,
+  faTableTennis,
   faUserAstronaut
 } from "@fortawesome/free-solid-svg-icons";
+import {QrService} from "../_services/qr.service";
 
 @Component({
   selector: 'app-home',

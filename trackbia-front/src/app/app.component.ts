@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {TokenStorageService} from "./_services/token-storage.service";
-import {faChartBar, faChartLine, faChartPie, faDownload, faHome} from '@fortawesome/free-solid-svg-icons';
+import {faChartBar, faHome} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
-  showModeratorBoard = false;
   username?: string;
   faDashboard = faChartBar;
   faHome = faHome;

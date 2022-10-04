@@ -63,8 +63,8 @@
           *ngIf="codeDescription.errors && f.submitted"
           style="margin-top: 4px;"
         >
-          <div *ngIf="codeDescription.errors.required">Description is required</div>
-          <div *ngIf="codeDescription.errors.minlength">
+          <div *ngIf="codeDescription.errors['required']">Description is required</div>
+          <div *ngIf="codeDescription.errors['minlength']">
             Description must be at least 8 characters
           </div>
         </div>

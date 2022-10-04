@@ -1,74 +1,53 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { appRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {HttpClientModule} from "@angular/common/http";
-import {LeafletMarkerClusterDirective, LeafletMarkerClusterModule} from "@asymmetrik/ngx-leaflet-markercluster";
-import {LeafletModule} from "@asymmetrik/ngx-leaflet";
-import {HomeComponent} from "./home/home.component";
-import {ProfileComponent} from "./profile/profile.component";
-import {LoginComponent} from "./login/login.component";
-import {MapComponent} from "./map/map.component";
-import {RegisterComponent} from "./register/register.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {ViewCardListComponent} from "./view-card-list/view-card-list.component";
-import {DatePipe, LowerCasePipe} from "@angular/common";
-import {QRCodeModule} from "angular2-qrcode";
-import {AuthService} from "./_services/auth.service";
-import {AuthInterceptor} from "./_helpers/auth.interceptor";
-import {PageService} from "./_services/page.service";
-import {PaginationService} from "./_services/pagination.service";
-import {PopupService} from "./_services/popup.service";
-import {QrService} from "./_services/qr.service";
-import {SeccryptoService} from "./_services/seccrypto.service";
-import {SharedService} from "./_services/shared.service";
-import {TokenStorageService} from "./_services/token-storage.service";
-import {UserService} from "./_services/user.service";
-import {ViewsBackendService} from "./_services/views-backend.service";
 
+import {appRoutingModule} from './app-routing.module';
+import { AppComponent } from './app.component';
+import {HomeComponent} from "./home/home.component";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {RegisterComponent} from "./register/register.component";
+import {CommonModule} from "@angular/common";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {LoginComponent} from "./login/login.component";
+import {ProfileComponent} from "./profile/profile.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {QRCodeModule} from "angular2-qrcode";
+import {PaginationService} from "./_services/pagination.service";
+import {AuthInterceptor} from "./_helpers/auth.interceptor";
+import {AnalyticsComponent} from "./analytics/analytics.component";
+import {ViewCardListComponent} from "./view-card-list/view-card-list.component";
+import {MapComponent} from "./map/map.component";
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {LeafletMarkerClusterModule} from "@asymmetrik/ngx-leaflet-markercluster";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    MapComponent,
-    RegisterComponent,
     DashboardComponent,
+    AnalyticsComponent,
     ViewCardListComponent,
-    LeafletMarkerClusterDirective,
-    DatePipe,
-    LowerCasePipe
+    MapComponent
   ],
   imports: [
     BrowserModule,
     appRoutingModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
+    HttpClientModule,
+    CommonModule,
+    QRCodeModule,
     LeafletModule,
-    LeafletMarkerClusterModule,
-    QRCodeModule
+    LeafletMarkerClusterModule
   ],
   providers: [
-    AuthService,
-    AuthInterceptor,
-    PageService,
-    PaginationService,
-    PopupService,
-    QrService,
-    SeccryptoService,
-    SharedService,
-    TokenStorageService,
-    UserService,
-    ViewsBackendService
-  ],
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    PaginationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

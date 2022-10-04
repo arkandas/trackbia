@@ -11,10 +11,10 @@ import {
   faExternalLinkAlt,
   faEdit
 } from "@fortawesome/free-solid-svg-icons";
-import {PageService} from "../_services/page.service";
 import {first} from "rxjs/operators";
 import {environment} from "../../environments/environment";
 import {PaginationService} from "../_services/pagination.service";
+import {PageService} from "../_services/page.service";
 
 
 @Component({
