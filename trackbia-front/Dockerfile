@@ -3,7 +3,10 @@ FROM node:lts-alpine3.16 as compile
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
 RUN npm install
-RUN npm run build --prod
+ARG PROFILE
+ENV PROFILE $PROFILE
+RUN echo "Environment: ${PROFILE}"
+RUN npm run build-${PROFILE}
 
 # Build Docker Image
 FROM nginx:1.23.1-alpine
