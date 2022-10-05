@@ -55,7 +55,7 @@ export class DashboardComponent implements OnInit {
     this.loadQrViews();
     setInterval(() => {
       this.loadQrViews()
-    }, 5000);
+    }, 10000);
   }
 
   public qrCodeVal: string = '';
@@ -102,15 +102,14 @@ export class DashboardComponent implements OnInit {
         this.responseMessage = 'QR created successfully';
         this.isVisible = true;
         this.isQrCreated = true;
-        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 2.5s
+        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 1.5s
       },
       err => {
         this.responseMessage = 'Error during QR creation';
-
         this.errorMessage = err.error.message;
         this.errorMessage = err.message;
         this.isVisible = true;
-        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 2.5s
+        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 1.5s
         this.loadQrViews();
       }
     );
@@ -180,7 +179,7 @@ export class DashboardComponent implements OnInit {
         this.responseMessage = 'QR edited successfully';
         this.isVisible = true;
         this.resetQRCreation();
-        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 2.5s
+        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 1.5s
       },
       err => {
         this.responseMessage = 'Error during QR edition';
@@ -188,7 +187,7 @@ export class DashboardComponent implements OnInit {
         this.errorMessage = err.message;
         this.isVisible = true;
         this.resetQRCreation();
-        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 2.5s
+        setTimeout(() => this.loadQrViews(), 1500); // hide the alert after 1.5s
       }
     );
   }

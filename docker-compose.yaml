@@ -25,7 +25,16 @@ services:
       - SPRING_DATASOURCE_PASSWORD=test
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     ports:
-      - '8080:8080'
+      - '8011:8080'
+  trackbiafront:
+    image: 'trackbiafront:latest'
+    build:
+      context: ./trackbia-front/
+    container_name: trackbiafront
+    depends_on:
+      - trackbiaback
+    ports:
+      - '8012:80'
 volumes:
   postgres-db:
     driver: local
