@@ -5,6 +5,7 @@ COPY ./ /usr/local/app/
 RUN npm install
 ARG PROFILE
 ENV PROFILE $PROFILE
+ENV NODE_OPTIONS --openssl-legacy-provider
 RUN echo "Environment: ${PROFILE}"
 RUN npm run build-${PROFILE}
 
