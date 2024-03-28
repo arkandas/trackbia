@@ -7,6 +7,7 @@ services:
       - POSTGRES_USER=arkandas
       - POSTGRES_PASSWORD=test
       - POSTGRES_DB=trackbia
+    restart: always
     ports:
       - '5432:5432'
     volumes:
@@ -24,6 +25,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=arkandas
       - SPRING_DATASOURCE_PASSWORD=test
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    restart: always
     ports:
       - '8011:8080'
   trackbiafront:
@@ -35,6 +37,7 @@ services:
     container_name: trackbiafront-prod
     depends_on:
       - trackbiaback
+    restart: always
     ports:
       - '8012:80'
 volumes:
