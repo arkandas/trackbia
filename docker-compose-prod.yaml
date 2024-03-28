@@ -2,7 +2,6 @@ version: '3.8'
 services:
   postgres-db:
     image: postgres:14.5-alpine
-    restart: always
     environment:
       - POSTGRES_USER=arkandas
       - POSTGRES_PASSWORD=test
